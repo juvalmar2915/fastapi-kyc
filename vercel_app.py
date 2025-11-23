@@ -35,7 +35,7 @@ class UserMock(BaseModel):
 @app.post("/verify")
 async def verify_user(user: UserMock):
     """Demo endpoint: receives a mocked user and returns isverified=true always."""
-    return {"isverified": True, "user": user.model_dump()}
+    return {"isverified": True, "user": user.dict()}
 
 @app.get("/health")
 async def health():

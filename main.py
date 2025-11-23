@@ -51,7 +51,7 @@ async def verify_user(user: UserMock):
     Response:
       { "isverified": true, "user": { ... } }
     """
-    return {"isverified": True, "user": user.model_dump()}
+    return {"isverified": True, "user": user.dict()}
 
 @app.get("/health")
 async def health():
